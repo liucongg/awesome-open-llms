@@ -6,7 +6,7 @@
   <p>
     <a href="./README.md">简体中文</a> ·
     <a href="./README_EN.md">English</a> ·
-    <strong>Read Online (link coming soon)</strong> ·
+    <a href="https://awesome-open-llms.logcongcong.workers.dev/">Read Online</a> ·
   </p>
 </div>
 

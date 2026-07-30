@@ -6,7 +6,7 @@
   <p>
     <a href="./README.md">简体中文</a> ·
     <a href="./README_EN.md">English</a> ·
-    <strong>在线阅读（链接待补充）</strong> ·
+    <a href="https://awesome-open-llms.logcongcong.workers.dev/">在线阅读</a> ·
   </p>
 </div>
 
