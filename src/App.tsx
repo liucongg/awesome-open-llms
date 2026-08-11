@@ -32,9 +32,9 @@ type View = "home" | "read" | "guide" | "contact";
 
 const monthlySpotlight = {
   year: 2026,
-  month: 7,
-  title: "Kimi K3",
-  highlights: ["2.8T 原生多模态", "KDA", "Stable LatentMoE"],
+  month: 8,
+  title: "DeepSeek-V4-Flash-0731",
+  highlights: ["284B 总参数", "13B 激活参数", "最高 1M 上下文"],
 };
 
 const routeFromHash = (): View => {
@@ -367,7 +367,8 @@ function HomePage({ onRead }: { onRead: () => void }) {
                 {String(index + 1).padStart(2, "0")}
               </span>
               <time>
-                {entry.year}.{String(entry.month).padStart(2, "0")}.
+                {entry.releaseYear}.
+                {String(entry.releaseMonth).padStart(2, "0")}.
                 {String(entry.day).padStart(2, "0")}
               </time>
               <h3>{entry.title}</h3>
@@ -668,13 +669,15 @@ function ImageLightbox({
 }
 
 function ModelArticle({ entry }: { entry: ModelEntry }) {
-  const date = `${String(entry.month).padStart(2, "0")}.${String(entry.day).padStart(2, "0")}`;
+  const date = `${String(entry.releaseMonth).padStart(2, "0")}.${String(entry.day).padStart(2, "0")}`;
   const [imageOpen, setImageOpen] = useState(false);
 
   return (
     <section className="model-article" id={entry.id}>
       <div className="model-heading">
-        <time dateTime={`${entry.year}-${entry.month}-${entry.day}`}>
+        <time
+          dateTime={`${entry.releaseYear}-${entry.releaseMonth}-${entry.day}`}
+        >
           {date}
         </time>
         <h2>{entry.title}</h2>
@@ -730,7 +733,8 @@ function SearchResults({
             type="button"
           >
             <time>
-              {entry.year}.{String(entry.month).padStart(2, "0")}.
+              {entry.releaseYear}.
+              {String(entry.releaseMonth).padStart(2, "0")}.
               {String(entry.day).padStart(2, "0")}
             </time>
             <span>
