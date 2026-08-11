@@ -2,6 +2,8 @@ export type ModelEntry = {
   id: string;
   year: number;
   month: number;
+  releaseYear: number;
+  releaseMonth: number;
   day: number;
   title: string;
   description: string;
@@ -54,12 +56,15 @@ function parseDocument(path: string, raw: string): MonthArchive {
       }
     }
 
-    const entryMonth = Number(monthText);
+    const releaseMonth = Number(monthText);
+    const releaseYear = releaseMonth > month ? year - 1 : year;
     const day = Number(dayText);
     entries.push({
-      id: `${year}-${monthText}-${dayText}-${entries.length}`,
+      id: `${releaseYear}-${monthText}-${dayText}-${entries.length}`,
       year,
-      month: entryMonth,
+      month,
+      releaseYear,
+      releaseMonth,
       day,
       title,
       description,
@@ -67,7 +72,12 @@ function parseDocument(path: string, raw: string): MonthArchive {
     });
   }
 
-  entries.sort((a, b) => b.day - a.day);
+  entries.sort(
+    (a, b) =>
+      b.releaseYear - a.releaseYear ||
+      b.releaseMonth - a.releaseMonth ||
+      b.day - a.day,
+  );
 
   return {
     id: `${year}-${String(month).padStart(2, "0")}`,
@@ -86,5 +96,7 @@ export const allEntries = archives
   .flatMap((archive) => archive.entries)
   .sort(
     (a, b) =>
-      b.year - a.year || b.month - a.month || b.day - a.day,
+      b.releaseYear - a.releaseYear ||
+      b.releaseMonth - a.releaseMonth ||
+      b.day - a.day,
   );
