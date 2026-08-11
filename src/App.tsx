@@ -33,6 +33,8 @@ type View = "home" | "read" | "guide" | "contact";
 const monthlySpotlight = {
   year: 2026,
   month: 8,
+  entryYear: 2026,
+  entryMonth: 7,
   title: "DeepSeek-V4-Flash-0731",
   highlights: ["284B 总参数", "13B 激活参数", "最高 1M 上下文"],
 };
@@ -238,8 +240,8 @@ function HomePage({ onRead }: { onRead: () => void }) {
   const latest = allEntries.slice(0, 6);
   const spotlightEntry = allEntries.find(
     (entry) =>
-      entry.year === monthlySpotlight.year &&
-      entry.month === monthlySpotlight.month &&
+      entry.year === monthlySpotlight.entryYear &&
+      entry.month === monthlySpotlight.entryMonth &&
       entry.title === monthlySpotlight.title,
   );
 
