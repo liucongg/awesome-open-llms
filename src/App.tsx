@@ -34,9 +34,9 @@ const monthlySpotlight = {
   year: 2026,
   month: 8,
   entryYear: 2026,
-  entryMonth: 7,
-  title: "DeepSeek-V4-Flash-0731",
-  highlights: ["284B 总参数", "13B 激活参数", "最高 1M 上下文"],
+  entryMonth: 8,
+  title: "Qwen3.8-27B",
+  highlights: ["27B 稠密参数", "原生视觉语言模型", "端侧部署表现突出"],
 };
 
 const routeFromHash = (): View => {
