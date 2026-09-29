@@ -35,8 +35,8 @@ const monthlySpotlight = {
   month: 9,
   entryYear: 2026,
   entryMonth: 9,
-  title: "Qwen-Image-2.1",
-  highlights: ["统一图像生成与编辑", "7B DiT 视觉生成组件", "文本到图像与指令编辑"],
+  title: "DeepSeek-V4.1-Flash",
+  highlights: ["多模态 MoE 架构", "原生图文处理", "最高 1M 上下文"],
 };
 
 const routeFromHash = (): View => {
