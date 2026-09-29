@@ -32,11 +32,11 @@ type View = "home" | "read" | "guide" | "contact";
 
 const monthlySpotlight = {
   year: 2026,
-  month: 8,
+  month: 9,
   entryYear: 2026,
-  entryMonth: 8,
-  title: "Qwen3.8-27B",
-  highlights: ["27B 稠密参数", "原生视觉语言模型", "端侧部署表现突出"],
+  entryMonth: 9,
+  title: "Qwen-Image-2.1",
+  highlights: ["统一图像生成与编辑", "7B DiT 视觉生成组件", "文本到图像与指令编辑"],
 };
 
 const routeFromHash = (): View => {

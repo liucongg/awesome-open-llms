@@ -14,7 +14,7 @@
 
 Awesome Open LLMs is a continuously updated Chinese-language archive of open-source models, organized by year and month. It tracks model names, organizations, parameter sizes, capabilities, technical highlights, and original screenshots in reverse chronological order.
 
-The archive currently covers **June 2025 through August 2026** and will continue to grow with monthly updates.
+The archive currently covers **June 2025 through September 2026** and will continue to grow with monthly updates.
 
 ## Highlights
 
@@ -29,6 +29,7 @@ The archive currently covers **June 2025 through August 2026** and will continue
 
 ### 2026
 
+- [September 2026](./docs/2026/09.md)
 - [August 2026](./docs/2026/08.md)
 - [July 2026](./docs/2026/07.md)
 - [June 2026](./docs/2026/06.md)
